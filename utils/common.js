@@ -2,7 +2,6 @@ let common = {};
 const http = require('http');
 const Joi = require('@hapi/joi');
 const env = "test"
-const logger = require('../log/logger').logerMiddleware;
 
 common.httpPost = (post_data, options) => {
   let content = JSON.stringify(post_data);
