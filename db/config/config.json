@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "dev",
+    "password": "xxxxxx",
+    "database": "webasenodemanager",
+    "host": "xxxxxx",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "test",
+    "password": "xxxxxxx",
+    "database": "webasenodemanager",
+    "host": "xxxxxx",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "pro",
+    "password": "xxxxxxx",
+    "database": "webasenodemanager",
+    "host": "xxxxxxx",
+    "dialect": "mysql"
+  }
+}
