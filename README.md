@@ -1,55 +1,55 @@
-- [前提条件](#----)
-- [需要用到的RPC接口](#-----rpc--)
-  * [block](#block)
-    + [getBlockNumber-返回节点指定群组内的最新区块高度](#getblocknumber-----------------)
-      - [1、参数](#1---)
-      - [2、示例](#2---)
-    + [getBlockByHash-返回根据区块哈希查询的区块信息](#getblockbyhash----------------)
-      - [1、参数](#1----1)
-      - [2、示例](#2----1)
-    + [getBlockHashByNumber-返回根据区块高度查询的区块哈希](#getblockhashbynumber----------------)
-      - [1、参数](#1----2)
-      - [2、示例](#2----2)
-  * [transaction](#transaction)
-    + [getTransactionByHash-返回根据交易哈希查询的交易信息](#gettransactionbyhash----------------)
-      - [1、参数](#1----3)
-      - [2、示例](#2----3)
-    + [getTransactionReceipt-返回根据交易哈希查询的交易回执信息](#gettransactionreceipt------------------)
-      - [1、参数](#1----4)
-      - [2、示例](#2----4)
-    + [getPendingTransactions-返回待打包的交易信息](#getpendingtransactions-----------)
-      - [1、参数](#1----5)
-      - [2、示例](#2----5)
-    + [getTotalTransactionCount-返回当前交易总数和区块高度](#gettotaltransactioncount--------------)
-      - [1、参数](#1----6)
-      - [2、示例](#2----6)
-  * [contract](#contract)
-    + [getCode-返回根据合约地址查询的合约数据](#getcode----------------)
-      - [1、参数](#1----7)
-      - [2、示例](#2----7)
-  * [node](#node)
-    + [getNodeIDList-返回节点本身和已连接的p2p节点列表](#getnodeidlist------------p2p----)
-      - [1、参数](#1----8)
-      - [2、示例](#2----8)
-    + [getSealerList-返回指定群组内的共识节点列表](#getsealerlist---------------)
-      - [1、参数](#1----9)
-      - [2、示例](#2----9)
-    + [getObserverList-返回指定群组内的观察节点列表](#getobserverlist---------------)
-      - [1、参数](#1----10)
-      - [2、示例](#2----10)
-  * [group](#group)
-    + [getGroupList-返回节点所属群组的群组ID列表](#getgrouplist------------id--)
-      - [1、参数](#1----11)
-      - [2、示例](#2----11)
-    + [getGroupPeers-返回指定群组内的共识节点和观察节点列表](#getgrouppeers--------------------)
-      - [1、参数](#1----12)
-      - [2、示例](#2----12)
-    + [getConsensusStatus-返回指定群组内的共识状态信息](#getconsensusstatus---------------)
-      - [1、参数](#1----13)
-      - [2、示例](#2----13)
-    + [getPbftView-返回节点所在指定群组内的最新PBFT视图](#getpbftview---------------pbft--)
-      - [1、参数](#1----14)
-      - [2、示例](#2----14)
+- [前提条件](#%e5%89%8d%e6%8f%90%e6%9d%a1%e4%bb%b6)
+- [需要用到的RPC接口](#%e9%9c%80%e8%a6%81%e7%94%a8%e5%88%b0%e7%9a%84rpc%e6%8e%a5%e5%8f%a3)
+  - [block](#block)
+    - [getBlockNumber](#getblocknumber)
+      - [1、参数](#1%e5%8f%82%e6%95%b0)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b)
+    - [getBlockByHash](#getblockbyhash)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-1)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-1)
+    - [getBlockHashByNumber](#getblockhashbynumber)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-2)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-2)
+  - [transaction](#transaction)
+    - [getTransactionByHash](#gettransactionbyhash)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-3)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-3)
+    - [getTransactionReceipt](#gettransactionreceipt)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-4)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-4)
+    - [getPendingTransactions](#getpendingtransactions)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-5)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-5)
+    - [getTotalTransactionCount](#gettotaltransactioncount)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-6)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-6)
+  - [contract](#contract)
+    - [getCode](#getcode)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-7)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-7)
+  - [node](#node)
+    - [getNodeIDList](#getnodeidlist)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-8)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-8)
+    - [getSealerList](#getsealerlist)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-9)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-9)
+    - [getObserverList](#getobserverlist)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-10)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-10)
+  - [group](#group)
+    - [getGroupList](#getgrouplist)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-11)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-11)
+    - [getGroupPeers](#getgrouppeers)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-12)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-12)
+    - [getConsensusStatus](#getconsensusstatus)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-13)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-13)
+    - [getPbftView](#getpbftview)
+      - [1、参数](#1%e5%8f%82%e6%95%b0-14)
+      - [2、示例](#2%e7%a4%ba%e4%be%8b-14)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -57,9 +57,10 @@
 - 安装好[fisco-bcos](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html)
 # 需要用到的RPC接口
 ## block
-### getBlockNumber-返回节点指定群组内的最新区块高度
+### getBlockNumber
+返回节点指定群组内的最新区块高度
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 + blockNumber: string - 区块高度(十进制字符串或0x开头的十六进制字符串)
 + includeTransactions: bool - 包含交易标志(true显示交易详细信息，false仅显示交易的hash)
 #### 2、示例
@@ -67,9 +68,10 @@
 curl -X POST --data '{"jsonrpc":"2.0","method":"getBlockNumber","params":[1],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
-### getBlockByHash-返回根据区块哈希查询的区块信息
+### getBlockByHash
+返回根据区块哈希查询的区块信息
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 + blockHash: string - 区块哈希
 + includeTransactions: bool - 包含交易标志(true显示交易详细信息，false仅显示交易的hash)
 #### 2、示例
@@ -77,9 +79,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"getBlockNumber","params":[1],"id
 curl -X POST --data '{"jsonrpc":"2.0","method":"getBlockByHash","params":[1,"0x910ea44e2a83618c7cc98456678c9984d94977625e224939b24b3c904794b5ec",true],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
-### getBlockHashByNumber-返回根据区块高度查询的区块哈希
+### getBlockHashByNumber
+返回根据区块高度查询的区块哈希
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 + blockNumber: string - 区块高度(十进制字符串或0x开头的十六进制字符串)
 #### 2、示例
 ```
@@ -89,9 +92,10 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"getBlockHashByNumber","params":[
 
 
 ## transaction
-### getTransactionByHash-返回根据交易哈希查询的交易信息
+### getTransactionByHash
+返回根据交易哈希查询的交易信息
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 + transactionHash: string - 交易哈希
 #### 2、示例
 ```
@@ -99,35 +103,39 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"getBlockHashByNumber","params":[
 ```
 
 
-### getTransactionReceipt-返回根据交易哈希查询的交易回执信息
+### getTransactionReceipt
+返回根据交易哈希查询的交易回执信息
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 + transactionHash: string - 交易哈希
 #### 2、示例
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"getTransactionReceipt","params":[1,"0x708b5781b62166bd86e543217be6cd954fd815fd192b9a124ee9327580df8f3f"],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
-### getPendingTransactions-返回待打包的交易信息
+### getPendingTransactions
+返回待打包的交易信息
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 #### 2、示例
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"getPendingTransactions","params":[1],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
-### getTotalTransactionCount-返回当前交易总数和区块高度
+### getTotalTransactionCount
+返回当前交易总数和区块高度
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 #### 2、示例
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"getTotalTransactionCount","params":[1],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
 ## contract
-### getCode-返回根据合约地址查询的合约数据
+### getCode
+返回根据合约地址查询的合约数据
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 + address: string - 合约地址
 #### 2、示例
 ```
@@ -135,32 +143,36 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"getCode","params":[1,"0xa94f5374
 ```
 
 ## node
-### getNodeIDList-返回节点本身和已连接的p2p节点列表
+### getNodeIDList
+返回节点本身和已连接的p2p节点列表
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 #### 2、示例
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"getNodeIDList","params":[1],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
-### getSealerList-返回指定群组内的共识节点列表
+### getSealerList
+返回指定群组内的共识节点列表
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 #### 2、示例
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"getSealerList","params":[1],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
-### getObserverList-返回指定群组内的观察节点列表
+### getObserverList
+返回指定群组内的观察节点列表
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 #### 2、示例
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"getObserverList","params":[1],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
 ## group
-### getGroupList-返回节点所属群组的群组ID列表
+### getGroupList
+返回节点所属群组的群组ID列表
 #### 1、参数
 + 无
 #### 2、示例
@@ -168,25 +180,28 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"getObserverList","params":[1],"i
 curl -X POST --data '{"jsonrpc":"2.0","method":"getGroupList","params":[],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
-### getGroupPeers-返回指定群组内的共识节点和观察节点列表
+### getGroupPeers
+返回指定群组内的共识节点和观察节点列表
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 #### 2、示例
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"getGroupPeers","params":[1],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
-### getConsensusStatus-返回指定群组内的共识状态信息
+### getConsensusStatus
+返回指定群组内的共识状态信息
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 #### 2、示例
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"getConsensusStatus","params":[1],"id":1}' http://127.0.0.1:8545 |jq
 ```
 
-### getPbftView-返回节点所在指定群组内的最新PBFT视图
+### getPbftView
+返回节点所在指定群组内的最新PBFT视图
 #### 1、参数
-+ groupID: unsigned int - 群组ID
++ groupID: number - 群组ID
 #### 2、示例
 ```
 curl -X POST --data '{"jsonrpc":"2.0","method":"getPbftView","params":[1],"id":1}' http://127.0.0.1:8545 |jq
