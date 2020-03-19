@@ -1,5 +1,7 @@
-# 需要用的的RPC接口
-
+[TOC]
+# 前提条件
+- 安装好[fisco-bcos](https://fisco-bcos-documentation.readthedocs.io/zh_CN/latest/docs/installation.html)
+# 需要用到的RPC接口
 ## block
 ### getBlockNumber-返回节点指定群组内的最新区块高度
 #### 1、参数
